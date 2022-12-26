@@ -1,0 +1,14 @@
+baseURL = 'http://powerfulfamily.net/'
+languageCode = 'ja-jp'
+title = '豪族.net'
+theme = 'hugo-theme-nostyleplease'
+[module]
+  [module.hugoVersion]
+    extended=true
+    min = "0.41.0"
+
+[params]
+  githubrepo = "masebb/powerfulfamily.net"
+  [params.theme_config]
+    back_home_text = "../"
+    date_format = "2006-01-02"

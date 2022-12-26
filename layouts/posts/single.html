@@ -1,0 +1,26 @@
+{{ define "main" }}
+{{ partial "back_link.html" .}}
+
+<article>
+    <p class="post-meta">
+        <time datetime="{{ .Date }}">
+            {{ .Date | time.Format site.Params.theme_config.date_format }}
+        </time>
+    </p>
+
+    <h1>{{ .Title }}</h1>
+
+    {{ .Content }}
+    
+    {{ with .Site.Params.githubrepo }}
+        <script src="https://utteranc.es/client.js"
+            repo="{{ . }}"
+            issue-term="pathname"
+            label="Comment"
+            theme="github-light"
+            crossorigin="anonymous"
+            async>
+        </script>
+    {{ end }}
+</article>
+{{ end }}
