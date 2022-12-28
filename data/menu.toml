@@ -2,45 +2,51 @@
 title = "とは"
 
   [[entries.entries]]
-  title = "<a href='https://twiiter.com/bb_mase'>間瀬bb</a>が管理する、自宅サーバなどでの実験に使われるドメインです。"
+  title = "間瀬bbが管理する、自宅サーバなどでの実験やコンテンツの公開に使われるドメインです。"
 
 [[entries]]
-title = "all posts"
+title = "ブログ"
 
   [entries.post_list]
-  limit = 5
+  limit = 10
   show_more = true
-  show_more_text = "過去の投稿"
-  show_more_url = "投稿"
-
-[[entries]]
-title = "posts by category"
-
-  [entries.post_list]
-  section = "posts"
-  show_more = true
-  show_more_text = "See more posts..."
+  show_more_text = "もっと見る..."
   show_more_url = "posts"
-
+[[entries]]
+title = "カテゴリ別で見る"
+url = "categories/"
 [[entries]]
 title = "rss"
 url = "index.xml"
 
 [[entries]]
-title = "another list"
+title = "間瀬BBのプロフィール"
 
   [[entries.entries]]
-  title = "with subitems"
+  title = "2006年3月8日生まれ(16歳) 高校2年生 コンピュータオタク"
 
+  [[entries.entries]]
+  title = "主な実績"
     [[entries.entries.entries]]
-    title = "with subsubitems"
+    title = "CODE BLUE2022 学生スタッフ"
 
+  [[entries.entries]]
+  title = "主な資格/免許"
     [[entries.entries.entries]]
-    title = "example page"
-    url = "about"
+    title = "電気工事士2種"
+    [[entries.entries.entries]]
+    title = "応用情報技術者試験 令和4年春期"
 
-[[entries]]
-title = "PRO TIP"
-entries = [
-   { title = "to edit this menu, edit data/menu.toml file" }
-  ]
+  [[entries.entries]]
+  title = "SNSなど"
+    [[entries.entries.entries]]
+    title = "Twitter : <a href='https://twiiter.com/bb_mase/'>@bb_mase</a>"
+    [[entries.entries.entries]]
+    title = "GitHub : <a href='https://github.com/masebb'>@bb_mase</a>"
+    [[entries.entries.entries]]
+    title = "Discord : 間瀬BB#9699"
+
+  [[entries.entries]]
+  title = "証明書"
+    [[entries.entries.entries]]
+    title = "SSH公開鍵 : <br> <code> ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIC2xzCqMGaMtrtpPM1URw3xuLThzRFKAEJaAE0KAxBqP masebb@thinkpadx260 </code>"
