@@ -9,6 +9,11 @@
     </p>
 
     <h1>{{ .Title }}</h1>
+    {{ if $.Param "toc"}}
+    <aside class="toc">
+        {{ .TableOfContents }}
+    </aside>
+    {{ end }}
 
     {{ .Content }}
     
