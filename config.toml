@@ -1,7 +1,8 @@
 baseURL = 'http://powerfulfamily.net/'
-languageCode = 'ja-jp'
+languageCode = 'ja'
 title = '豪族.net'
 theme = 'hugo-theme-nostyleplease'
+#enableGitInfo = true
 [module]
   [module.hugoVersion]
     extended=true
@@ -12,3 +13,13 @@ theme = 'hugo-theme-nostyleplease'
   [params.theme_config]
     back_home_text = "../"
     date_format = "2006-01-02"
+[markup]
+  [markup.tableOfContents]
+    endLevel = 5
+    ordered = false
+    startLevel = 3
+#[frontmatter]
+#date = ["date", "publishDate", "lastmod"]
+#lastmod = ["lastmod", ":git", "date", "publishDate"]
+#publishDate = ["publishDate", "date"]
+#expiryDate = ["expiryDate"]
