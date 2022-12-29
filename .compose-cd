@@ -1,3 +1,2 @@
 REPO="https://github.com/masebb/powerfulfamily.net"
-BEFORE_RESTART="./before-deploy.sh"
 AFTER_RESTART="./before-deploy.sh"
