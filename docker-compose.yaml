@@ -1,0 +1,18 @@
+services:
+    https-portal:
+        image: steveltn/https-portal:1
+        ports:
+            - 80:80
+            - 443:443
+        environment:
+            LISTEN_IPV6: "true"
+            DOMAINS: "powerfulfamily.net"
+            STAGE: production
+            ERROR_LOG: default
+            ACCESS_LOG: default
+            CUSTOM_NGINX_GLOBAL_HTTP_CONFIG_BLOCK: |
+                server_names_hash_bucket_size 64;
+        volumes:
+            - ./nginx-log/:/var/log/nginx/
+            - ./https-portal-data:/var/lib/https-portal/
+            - ./public/:/var/www/vhosts/powerfulfamily.net/
