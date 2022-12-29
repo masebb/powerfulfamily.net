@@ -16,7 +16,7 @@ title = "ブログ"
 title = "カテゴリ別で見る"
 url = "categories/"
 [[entries]]
-title = "rss"
+title = "RSS"
 url = "index.xml"
 
 [[entries]]
