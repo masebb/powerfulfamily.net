@@ -9,3 +9,5 @@ categories: [メモ]
 ```bash
  usermod -aG ${GROUP_NAME} ${USER_NAME}
 ```
+
+セッションを再度張り直さないと適用されないので注意
