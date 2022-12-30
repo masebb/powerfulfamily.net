@@ -13,6 +13,6 @@ services:
             CUSTOM_NGINX_GLOBAL_HTTP_CONFIG_BLOCK: |
                 server_names_hash_bucket_size 64;
         volumes:
-            - ./var/log/nginx/:/var/log/nginx/
+            - /var/log/nginx/:/var/log/nginx/
             - ./https-portal-data:/var/lib/https-portal/
             - ./public/:/var/www/vhosts/powerfulfamily.net/
