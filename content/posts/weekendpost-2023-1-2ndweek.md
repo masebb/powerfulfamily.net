@@ -2,7 +2,7 @@
 title: "週刊日記(2023年1月2週目)"
 date: 2023-01-16T20:23:42+09:00
 categories: [週間日記]
-draft: true
+draft: false
 toc: true
 ---
 1日ほど遅刻しての投稿です。なんとか2週間続いているのでセーフ
