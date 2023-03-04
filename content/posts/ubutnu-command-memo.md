@@ -1,7 +1,7 @@
 ---
 title: "Ubuntuたまに使う標準コマンド"
 date: 2022-12-25T01:24:04+09:00
-lastmod: 2023-01-24
+lastmod: 2023-03-04
 draft: false
 toc: true
 categories: [メモ]
@@ -17,10 +17,17 @@ categories: [メモ]
  du -sh ${DIR}
 ```
 sオプションを外せばtreeをaptで入れなくても網羅的にディレクトリ以下の全ファイルを見れる
+
+### バージョンやコードネームを出力
+```bash
+lsb_release -a
+```
+
 ### tar解凍
 ```bash
 tar -xvf ${FILE}
 ```
+
 ### ユーザをグループに追加
 ```bash
  usermod -aG ${GROUP_NAME} ${USER_NAME}
