@@ -23,7 +23,7 @@ url = "index.xml"
 title = "間瀬bbのプロフィール"
 
   [[entries.entries]]
-  title = "2006年3月8日生まれ(16歳) 高校2年生 コンピュータオタク"
+  title = "2006年3月8日生まれ(17歳) 高校2年生 コンピュータオタク"
 
   [[entries.entries]]
   title = "主な実績"
@@ -38,11 +38,13 @@ title = "間瀬bbのプロフィール"
     title = "応用情報技術者試験 令和4年春期"
 
   [[entries.entries]]
-  title = "SNSなど"
+  title = "各種アカウント"
     [[entries.entries.entries]]
     title = "Twitter : <a href='https://twitter.com/bb_mase/'>@bb_mase</a>"
     [[entries.entries.entries]]
-    title = "GitHub : <a href='https://github.com/masebb'>@bb_mase</a>"
+    title = "GitHub : <a href='https://github.com/masebb'>@masebb</a>"
+    [[entries.entries.entries]]
+    title = "Misskey.io : <a href='https://misskey.io/@masebb'>@masebb</a>"
     [[entries.entries.entries]]
     title = "Discord : 間瀬BB#9699"
 
