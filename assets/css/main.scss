@@ -26,7 +26,6 @@ html { height: 100%; }
 
 body {
     color: black;
-    font-family: monospace;
     font-size: 16px;
     line-height: 1.5;
     margin: 0;
@@ -86,6 +85,7 @@ table, th, td {
 code {
     color: white;
     background: #272822;
+    padding: 3px;
 }
 
 code.has-jax {
