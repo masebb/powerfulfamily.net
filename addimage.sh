@@ -25,3 +25,6 @@ mkdir -p "$dstDir"
 convert -resize "$resizearg" -auto-orient "$imgsrc" -strip "$dst"
 #圧縮
 jpegoptim --max=80 "$dst"
+
+#shortcode表示
+echo "![](/images/${posttitle}/${imgname}.jpg)"
