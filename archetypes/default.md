@@ -1,9 +1,8 @@
 ---
 title: "{{ replace .Name "-" " " | title }}"
 date: {{ .Date }}
-categories: [example]
-#公開時はdraftをfalseに!!!!!!!!!!!!
-draft: true
-toc: true
+categories: [日記]
+draft: false
+toc: false
 ---
 
