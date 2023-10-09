@@ -108,3 +108,20 @@ img {
     display: block;
     margin: 0 auto;
 }
+
+#banner{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  flex: 200px;
+  margin: auto 40px;
+}
+
+.banner-item{
+  width: 250px;
+  margin: 10px 10px;
+}
+
+.banner-item img{
+  width: 100%;
+}

@@ -10,6 +10,7 @@ theme = 'hugo-theme-nostyleplease'
 
 [params]
   githubrepo = "masebb/powerfulfamily.net"
+  favicon = "favicon.ico" 
   [params.theme_config]
     back_home_text = "../"
     date_format = "2006-01-02"
