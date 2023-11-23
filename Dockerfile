@@ -1,5 +1,5 @@
 # Build stage
-FROM debian:bookworm-slim
+FROM debian:bookworm-slim AS builder
 
 ARG HUGO_VERSION="0.119.0"
 ARG ARCH="amd64"
@@ -14,5 +14,5 @@ RUN hugo --minify
 
 # Run stage
 FROM nginx:1.25.3
-COPY powerfulfamily.net/public/ /usr/share/nginx/html/
+COPY --from=builder powerfulfamily.net/public/ /usr/share/nginx/html/
 EXPOSE 80
