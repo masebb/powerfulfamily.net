@@ -8,8 +8,8 @@ RUN apt update && apt install -y wget git
 RUN wget https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_linux-${ARCH}.deb
 RUN dpkg -i hugo_extended_${HUGO_VERSION}_linux-${ARCH}.deb
 
-COPY . powerfulfamily.net/
-WORKDIR powerfulfamily.net/
+COPY . /powerfulfamily.net/
+WORKDIR /powerfulfamily.net/
 RUN hugo --minify
 
 # Run stage
