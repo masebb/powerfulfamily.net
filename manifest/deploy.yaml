@@ -15,7 +15,7 @@ spec:
       path: manifest/app/
   destination:
     server: 'https://kubernetes.default.svc'
-    namespace: powerfulfamily.net
+    namespace: powerfulfamily
   syncPolicy:
     syncOptions:
       - Prune=true
