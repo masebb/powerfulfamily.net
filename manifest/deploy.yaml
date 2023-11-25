@@ -1,0 +1,23 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: powerfulfamily.net
+  namespace: argocd
+  annotations:
+    argocd-image-updater.argoproj.io/write-back-method: argocd
+    argocd-image-updater.argoproj.io/image-list: app=ghcr.io/masebb/powerfulfamily.net:latest
+    argocd-image-updater.argoproj.io/app.update-strategy: latest
+spec:
+  project: default
+  sources:
+    - repoURL: 'https://github.com/masebb/powerfulfamily.net.git'
+      targetRevision: HEAD
+      path: manifest/app/
+  destination:
+    server: 'https://kubernetes.default.svc'
+    namespace: powerfulfamily.net
+  syncPolicy:
+    syncOptions:
+      - Prune=true
+      - CreateNamespace=true
+    automated: {}
