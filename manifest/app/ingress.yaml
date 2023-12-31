@@ -2,8 +2,9 @@ apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: powerfulfamily-ingress
+  cert-manager.io/issuer: "letsencrypt-prod"
 spec:
-  ingressClassName: nginx
+  ingressClassName: external-nginx
   rules:
     - host: powerfulfamily.net
       http:
@@ -15,3 +16,17 @@ spec:
                   number: 80
             path: /
             pathType: Prefix
+---
+apiVersion: cert-manager.io/v1
+kind: Issuer
+metadata:
+  name: letsencrypt-prod
+spec:
+  acme:
+    server: https://acme-v02.api.letsencrypt.org/directory
+    privateKeySecretRef:
+      name: letsencrypt-prod
+    solvers:
+      - http01:
+          ingress:
+            ingressClassName: external-nginx

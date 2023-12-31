@@ -26,6 +26,8 @@ metadata:
   labels:
     name: powerfulfamily
   name: powerfulfamily
+  annotations:
+    #metallb.universe.tf/loadBalancerIPs: 202.226.4.163,2403:bd80:c000:1600::a:3
 spec:
   selector:
     app: powerfulfamily
