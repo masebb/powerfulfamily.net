@@ -5,6 +5,9 @@ metadata:
   cert-manager.io/issuer: "letsencrypt-prod"
 spec:
   ingressClassName: external-nginx
+  tls:
+    - hosts: powerfulfamily.net
+      secretName: letsencrypt-prod
   rules:
     - host: powerfulfamily.net
       http:
