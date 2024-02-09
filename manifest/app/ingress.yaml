@@ -6,8 +6,9 @@ metadata:
 spec:
   ingressClassName: external-nginx
   tls:
-    - hosts: powerfulfamily.net
-      secretName: letsencrypt-prod
+    - hosts:
+        - powerfulfamily.net
+      secretName: letsencrypt-prod-powerfulfamily-net
   rules:
     - host: powerfulfamily.net
       http:
@@ -23,12 +24,12 @@ spec:
 apiVersion: cert-manager.io/v1
 kind: Issuer
 metadata:
-  name: letsencrypt-prod
+  name: letsencrypt-prod-powerfulfamily-net
 spec:
   acme:
     server: https://acme-v02.api.letsencrypt.org/directory
     privateKeySecretRef:
-      name: letsencrypt-prod
+      name: letsencrypt-prod-powerfulfamily-net
     solvers:
       - http01:
           ingress:
