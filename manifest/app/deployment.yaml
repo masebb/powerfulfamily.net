@@ -3,19 +3,19 @@ kind: Deployment
 metadata:
   name: powerfulfamily-deployment
   labels:
-    app: powerfulfamily-blog
+    app: "powerfulfamily-blog"
 spec:
   replicas: 2
   selector:
     matchLabels:
-      app: powerfulfamily-blog
+      app: "powerfulfamily-blog"
   template:
     metadata:
       labels:
-        app: powerfulfamily-blog
+        app: "powerfulfamily-blog"
     spec:
       containers:
-      - name: powerfulfamily-blog
+      - name: "powerfulfamily-blog"
         image: ghcr.io/masebb/powerfulfamily.net:latest
         ports:
         - containerPort: 80
@@ -24,11 +24,11 @@ apiVersion: v1
 kind: Service
 metadata:
   labels:
-    name: powerfulfamily-blog
-  name: powerfulfamily-blog
+    name: "powerfulfamily-blog"
+  name: "powerfulfamily-blog"
 spec:
   selector:
-    app: powerfulfamily-blog
+    app: "powerfulfamily-blog"
   ports:
     - targetPort: http
       port: 80
