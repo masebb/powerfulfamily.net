@@ -38,6 +38,7 @@ apiVersion: cert-manager.io/v1
 kind: Issuer
 metadata:
   name: letsencrypt-prod-powerfulfamily-net
+  namespace: powerfulfamily
 spec:
   acme:
     server: https://acme-v02.api.letsencrypt.org/directory
@@ -52,6 +53,7 @@ apiVersion: cert-manager.io/v1
 kind: Issuer
 metadata:
   name: letsencrypt-prod-www-powerfulfamily-net
+  namespace: powerfulfamily
 spec:
   acme:
     server: https://acme-v02.api.letsencrypt.org/directory
