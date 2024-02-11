@@ -4,7 +4,7 @@ metadata:
   name: powerfulfamily-ingress
   cert-manager.io/issuer: "letsencrypt-prod"
 spec:
-  ingressClassName: external-nginx
+  ingressClassName: powerfulfamily-nginx
   tls:
     - hosts:
       - powerfulfamily.net
@@ -18,7 +18,7 @@ spec:
         paths:
           - backend:
               service:
-                name: powerfulfamily
+                name: powerfulfamily-blog
                 port:
                   number: 80
             path: /
@@ -28,7 +28,7 @@ spec:
         paths:
           - backend:
               service:
-                name: powerfulfamily
+                name: powerfulfamily-blog
                 port:
                   number: 80
             path: /
@@ -47,7 +47,7 @@ spec:
     solvers:
       - http01:
           ingress:
-            ingressClassName: external-nginx
+            ingressClassName: powerfulfamily-nginx
 ---
 apiVersion: cert-manager.io/v1
 kind: Issuer
@@ -62,4 +62,4 @@ spec:
     solvers:
       - http01:
           ingress:
-            ingressClassName: external-nginx
+            ingressClassName: powerfulfamily-nginx
