@@ -7,10 +7,23 @@ spec:
   ingressClassName: external-nginx
   tls:
     - hosts:
-        - powerfulfamily.net
+      - powerfulfamily.net
       secretName: letsencrypt-prod-powerfulfamily-net
+    - hosts:
+      - www.powerfulfamily.net
+      secretName: letsencrypt-prod-www-powerfulfamily-net
   rules:
     - host: powerfulfamily.net
+      http:
+        paths:
+          - backend:
+              service:
+                name: powerfulfamily
+                port:
+                  number: 80
+            path: /
+            pathType: Prefix
+    - host: www.powerfulfamily.net
       http:
         paths:
           - backend:
@@ -30,6 +43,20 @@ spec:
     server: https://acme-v02.api.letsencrypt.org/directory
     privateKeySecretRef:
       name: letsencrypt-prod-powerfulfamily-net
+    solvers:
+      - http01:
+          ingress:
+            ingressClassName: external-nginx
+---
+apiVersion: cert-manager.io/v1
+kind: Issuer
+metadata:
+  name: letsencrypt-prod-www-powerfulfamily-net
+spec:
+  acme:
+    server: https://acme-v02.api.letsencrypt.org/directory
+    privateKeySecretRef:
+      name: letsencrypt-prod-www-powerfulfamily-net
     solvers:
       - http01:
           ingress:
