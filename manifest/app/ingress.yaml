@@ -8,10 +8,8 @@ spec:
   tls:
     - hosts:
       - powerfulfamily.net
-      secretName: letsencrypt-prod-powerfulfamily-net
-    - hosts:
       - www.powerfulfamily.net
-      secretName: letsencrypt-prod-www-powerfulfamily-net
+      secretName: letsencrypt-prod-powerfulfamily-blog
   rules:
     - host: powerfulfamily.net
       http:
@@ -37,28 +35,13 @@ spec:
 apiVersion: cert-manager.io/v1
 kind: Issuer
 metadata:
-  name: letsencrypt-prod-powerfulfamily-net
+  name: letsencrypt-prod
   namespace: powerfulfamily
 spec:
   acme:
     server: https://acme-v02.api.letsencrypt.org/directory
     privateKeySecretRef:
-      name: letsencrypt-prod-powerfulfamily-net
-    solvers:
-      - http01:
-          ingress:
-            ingressClassName: powerfulfamily-nginx
----
-apiVersion: cert-manager.io/v1
-kind: Issuer
-metadata:
-  name: letsencrypt-prod-www-powerfulfamily-net
-  namespace: powerfulfamily
-spec:
-  acme:
-    server: https://acme-v02.api.letsencrypt.org/directory
-    privateKeySecretRef:
-      name: letsencrypt-prod-www-powerfulfamily-net
+      name: letsencrypt-prod-account-key
     solvers:
       - http01:
           ingress:
