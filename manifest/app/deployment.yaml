@@ -8,11 +8,11 @@ spec:
   replicas: 2
   selector:
     matchLabels:
-      app: powerfulfamily_blog
+      app: powerfulfamily-blog
   template:
     metadata:
       labels:
-        app: powerfulfamily_blog
+        app: powerfulfamily-blog
     spec:
       containers:
       - name: powerfulfamily-blog
@@ -23,12 +23,10 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  labels:
-    name: powerfulfamily-blog
   name: powerfulfamily-blog
 spec:
   selector:
-    app: powerfulfamily_blog
+    app: powerfulfamily-blog
   ports:
     - targetPort: http
       port: 80
