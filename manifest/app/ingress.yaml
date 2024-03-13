@@ -33,6 +33,7 @@ spec:
             path: /
             pathType: Prefix
 ---
+# Lets Encrypt Prod発行局
 apiVersion: cert-manager.io/v1
 kind: Issuer
 metadata:
@@ -48,6 +49,7 @@ spec:
           ingress:
             ingressClassName: powerfulfamily-nginx
 ---
+# 自己証明書発行局
 apiVersion: cert-manager.io/v1
 kind: Issuer
 metadata:

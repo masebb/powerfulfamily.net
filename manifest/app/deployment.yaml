@@ -25,6 +25,7 @@ kind: Service
 metadata:
   name: powerfulfamily-blog
 spec:
+  ipFamilyPolicy: RequireDualStack
   selector:
     app: powerfulfamily-blog
   ports:
