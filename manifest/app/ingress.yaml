@@ -3,7 +3,7 @@ kind: Ingress
 metadata:
   name: powerfulfamily-ingress
   annotations:
-    cert-manager.io/issuer: "selfsigning-issuer"
+    cert-manager.io/issuer: "letsencrypt-prod"
 spec:
   ingressClassName: powerfulfamily-nginx
   tls:
@@ -48,11 +48,3 @@ spec:
       - http01:
           ingress:
             ingressClassName: powerfulfamily-nginx
----
-# 自己証明書発行局
-apiVersion: cert-manager.io/v1
-kind: Issuer
-metadata:
-  name: selfsigning-issuer
-spec:
-  selfSigned: {}
