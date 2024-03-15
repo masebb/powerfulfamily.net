@@ -13,6 +13,7 @@ spec:
     - repoURL: 'https://github.com/masebb/powerfulfamily.net.git'
       targetRevision: HEAD
       path: manifest/
+      kustomize: {}
   destination:
     server: 'https://kubernetes.default.svc'
     namespace: powerfulfamily
