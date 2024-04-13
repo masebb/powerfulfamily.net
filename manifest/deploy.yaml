@@ -4,16 +4,16 @@ metadata:
   name: powerfulfamily-blog
   namespace: argocd
   annotations:
-    argocd-image-updater.argoproj.io/write-back-method: argocd
     argocd-image-updater.argoproj.io/image-list: ghcr.io/masebb/powerfulfamily.net
+    argocd-image-updater.argoproj.io/write-back-method: argocd
     argocd-image-updater.argoproj.io/app.update-strategy: latest
 spec:
   project: default
-  sources:
-    - repoURL: 'https://github.com/masebb/powerfulfamily.net.git'
-      targetRevision: HEAD
-      path: manifest/
-      kustomize: {}
+  source:
+    repoURL: 'https://github.com/masebb/powerfulfamily.net.git'
+    targetRevision: HEAD
+    path: manifest/
+    kustomize: {}
   destination:
     server: 'https://kubernetes.default.svc'
     namespace: powerfulfamily
