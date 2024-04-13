@@ -4,9 +4,9 @@ metadata:
   name: powerfulfamily-blog
   namespace: argocd
   annotations:
-    argocd-image-updater.argoproj.io/image-list: ghcr.io/masebb/powerfulfamily.net
+    argocd-image-updater.argoproj.io/image-list: myimage=ghcr.io/masebb/powerfulfamily.net
     argocd-image-updater.argoproj.io/write-back-method: argocd
-    argocd-image-updater.argoproj.io/app.update-strategy: latest
+    argocd-image-updater.argoproj.io/myimage.update-strategy: latest
 spec:
   project: default
   source:
