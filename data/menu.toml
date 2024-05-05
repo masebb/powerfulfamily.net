@@ -53,4 +53,4 @@ title = "間瀬bbのプロフィール"
   [[entries.entries]]
   title = "証明書"
     [[entries.entries.entries]]
-    title = "SSH公開鍵 : <br> <code> ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIC2xzCqMGaMtrtpPM1URw3xuLThzRFKAEJaAE0KAxBqP masebb@thinkpadx260 </code>"
+    title = "SSH公開鍵 : <br> <code> ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIC2xzCqMGaMtrtpPM1URw3xuLThzRFKAEJaAE0KAxBqP masebb </code>"
