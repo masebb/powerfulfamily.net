@@ -112,14 +112,17 @@ img {
 #banner{
   display: flex;
   flex-wrap: wrap;
-  allign-items: center;
+  justify-content: center;
   flex: 200px;
   margin: auto 40px;
 }
 
 .banner-item{
   display:flex;
-  align-items: center;
-  width: 250px;
   margin: 10px 10px;
+}
+
+.banner-item img{
+  max-height: 50px;
+  hegith: 100%;
 }
